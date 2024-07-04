@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okorie Wisdom - Tech Goals</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl font-bold">Okorie Wisdom</h1>
+            <p class="text-lg">Front-end Developer & Tech Enthusiast</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-8 p-4">
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">About Me</h2>
+            <p>Hello! I am Okorie Wisdom, a passionate front-end developer. I love creating beautiful and functional web applications.</p>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">Tech Goals</h2>
+            <ul class="list-disc list-inside">
+                <li>Mastering CSS</li>
+                <li>Mastering JavaScript</li>
+                <li>Mastering React</li>
+                <li>Mastering Next.js</li>
+                
+                <li>Contributing to open-source projects</li>
+            </ul>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">Contact Information</h2>
+           
+                <div class="text-lg">
+                    <p class="font-semibold">Okorie Wisdom</p>
+                    <p>Day: <span id="current-day" class="font-semibold"></span></p>
+                    <p>Time: <span id="current-time" class="font-semibold text-blue-600"></span></p>
+                    <p class="font-semibold">wisdomokorie18@gmail.com</p>
+                </div>
+            <div class="mt-8">
+                <img src="wizzy.jpg" alt="">
+            </div>
+        </section>
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">Useful Links</h2>
+           
+                <div class="text-lg">
+                    <a href="https://hng.tech/learn" class="font-bold hover:text-blue-600">Learn more about HNG</a><br>
+                    <a href="https://keyword.dog/" class="font-bold hover:text-blue-600">Explore Keyword.dog</a><br>
+                    <a href="https://scrapeanyweb.site/" class="font-bold hover:text-blue-600">Scrape Any Web</a><br>
+                </div>
+            </ul>
+        </section>
+
+
+    </main>
+
+    <footer class="bg-blue-600 text-white p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Okorie Wisdom. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+<script>
+    function updateTime() {
+        const now = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const day = now.toLocaleDateString('en-US', options);
+        const time = now.toUTCString().match(/(\d{2}:\d{2}:\d{2})/)[0];
+        document.getElementById('current-day').innerText = day;
+        document.getElementById('current-time').innerText = time;
+    }
+
+    setInterval(updateTime, 1000);
+    window.onload = updateTime;
+</script>
+</html>
